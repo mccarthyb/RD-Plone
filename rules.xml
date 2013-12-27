@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- Apply the following rules to standard Plone pages -->
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+
+        <!-- Replace title with Plone's page title  -->
+        <replace css:theme="html head title" css:content="html head title" />
+
+        <!-- Copy base tag from Plone -->
+        <before css:theme-children="html head" css:content="html head base" />
+
+        <!-- Copy link, style, meta tags from Plone head -->
+        <after css:theme-children="html head"
+               content="/html/head/link | /html/head/style | /html/head/meta | /html/head/script"  />
+
+        <!-- merge classes from Plone body with theme body -->
+        <merge attributes="class" css:theme="body" css:content="body" />
+
+        <!-- Copy script tags from Plone head to end of body -->
+        <after css:theme-children="html body" css:content="html head script" />
+
+        <!-- Insert your own rules here -->
+
+        <!-- Replace navbar with Plone's navbar  -->
+        <replace css:theme="ul#portalNav" css:content="ul#portal-globalnav" />
+
+        <!-- Replace navbar with Plone's navbar  -->
+        <replace css:theme="div#content" css:content="#portal-columns" />
+
+        <!-- Replace tool placeholder with Plone's portal personal tools  -->
+        <replace css:theme="div#adminTools" css:content="#portal-personaltools" />
+
+        <!-- Replace search placeholder with Plone's search bar  -->
+        <replace css:theme-children="div#searchBar" css:content="#portal-searchbox" />
+
+        
+         <!-- Scripts -->
+    <drop css:content="script" css:if-content="#visual-portal-wrapper" />
+    <before method="raw" css:content="script" css:theme="noscript"/>
+
+</rules>

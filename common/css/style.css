@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End of Style Reset*/
+
+
+
+/* begin our Styles*/
+
+html{
+
+}
+body{
+
+}
+.clear{
+   clear: both;
+}
+#page{
+	height: 100%;
+   width:100%; 
+	margin: 0 auto;
+	
+}
+/* styking the header*/
+header a{
+  text-decoration: none;
+}
+#leftHead{
+   float: left;
+  
+}
+#logoImg{
+   height: 100%;
+}
+#rightHead{
+   float: right;
+}
+/*
+#adminTools{
+   background-color: #F8F8F8;
+   float: right;
+}*/
+#searchBar{
+
+   margin: 0 1.5em 0 0;
+}
+
+/*styling of the nav bar and list items*/
+#glob-navBar ul {
+   list-style:none;
+   margin:0;
+   padding:0;
+   text-align:center;
+   
+}
+#glob-navBar ul li {
+   display: inline-block;
+   margin:.25em .25em .25em 0;
+  -moz-border-radius: 15px;
+	border-radius: .3em;
+}
+#glob-navBar ul li a {
+   display:block;
+   padding:.5em;
+   color:#000;
+   text-decoration:none;
+   line-height:1em;
+   border:none;
+   background-color: #F0F0F0;
+}
+#glob-navBar{
+   margin-bottom: 1em;
+}
+h1{
+  text-align: center;
+  font-size:5em;
+}
+
+
+/* Media Queries for Smaller Size Screens*/
+
+@media screen and (max-width: 600px) {
+
+h1{
+  font-size:3em;
+}
+
+}
+
+/* Media Queries for Larger Size Screens*/
+@media screen and (min-width: 800px) {
+
+#page{
+   width:100%;
+   max-width: 1140px;
+}
+
+#rightHead{
+   float: right;
+}
+
+
+
+}
+@media screen and (max-width: 800px) {
+#leftHead{
+   width: 100%;
+   margin: 0;
+   float:none;
+}
+
+#logoImg{
+  height: 6em;
+  width: 100%;
+}
+#rightHead{
+   float: none;
+}
+#searchBar{
+
+   margin: 0;
+}
+header{
+   margin-bottom: .1em;
+}
+h1{
+  text-align: center;
+}
+div .searchSection{
+  display: none;
+}
+div .LSBox{
+  width: 100%;
+}
+div .LSBox #searchGadget {
+width: 80%;
+}
+}
